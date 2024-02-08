@@ -1,0 +1,37 @@
+prednasky v cestine slidy v anglictine
+
+dnesni prednaska jina
+
+ideal je americky system - aby si nastudovali a pak byla diskuse, ale to se nam nedari
+
+bohuzel predmet nema cviceni
+Python je vhodny jako prvni programovaci jazyk, ale na FIT to tak neni
+
+od priste budou body z prednasek - pripravit NB
+
+jupyter notebook
+
+This is not Beginner in Python, je to videt na pristi prednasce
+
+Obsah kurzu
+
+nelze ziskat kredity zadarmo
+stezuji si, ze chci to, co 
+
+budou videa
+
+Introduction, a brief history of scripting languages, pros and cons, comparison of languages
+
+
+I kdy je pøedmìt ISJ pro nìkteré první pøíleitostí k seznámení se s programovacím jazykem Python, a okrajovì Ruby, pøípadnì dalšími, nejedná se o základní kurz programování v tìchto jazycích. Osobnì se domnívám, e úvodní kurzy programování v konkrétním jazyce (za kredity) na univerzity snad ani nepatøí. Nìkteøí studenti je dnes absolvují dokonce u v ranıch roènících gymnázií èi na støedních školách. A i pokud se tak nestane, mìli by ti, kteøí úspìšnì prošli pøijímacími zkouškami na FIT a chtìjí poznat jen základní prvky jazykù typu Python, zvládnout pochopit náplò úvodních internetovıch kurzù, pøípadnì základních pøíruèek, kterıch je na internetu celá øada (viz také odkazy níe).
+
+Obsah pøedmìtu jde v mnoha smìrech daleko nad rámec základních kurzù programování a zhruba od poloviny semestru se pøedmìt dotıká témat, která bıvají øazena mezi pokroèilé techniky programování v tom kterém jazyce. I kdy tedy zaèínáme regulárními vırazy a základními stavebními kameny jazyka Python, probíráme tuto látku velmi rychle, abychom se co nejdøíve dostali ke konceptuálnì zajímavım a z hlediska systémovıch jazykù typu C novım tématùm. Dále, i kdy vìtšinu konstrukcí ukazujeme v jazyce Python a vyzdvihujeme nìkteré elegantní konstrukce v Ruby a jinde, zamìøuje se ISJ na obecné koncepty, které jsou typické pro celou rodinu vysokoúrovòovıch dynamickıch skriptovacích jazykù.
+ISJ není kurz, v nìm lze získat kredity zadarmo. Studenti 1. roèníku, kteøí o nìj budou mít zájem, jej urèitì zvládnou. Ale jistì budou muset pøekonat skuteènost, e se s nìkterımi koncepty (mj. i objektovì orientovanım pøístupem) setkají prostì poprvé, a nebudou tedy moci stavìt na základech osvojenıch ve specializovanıch kurzech. Zkušenost z pøedchozích let ale ukazuje, e se zvıšené úsilí z dlouhodobého hlediska i studentùm 1. roèníku vyplatí.
+
+Pøedmìt je nepovinnı, take vìtšinou není problém jej neabsolvovat. Pokud byste ale rovnou vìdìli, e se nebudete moci èi chtít pøípravì a projektùm pravidelnì vìnovat, doporuèuji radìji vybrat jednodušší kurzy. A nejste zklamaní...
+
+Pro kadé z probíranıch témat jsou zveøejnìny odkazy na volnì dostupné zdroje, èasto videa z konferenèních pøednášek (v angliètinì), s nimi by se studenti mìli seznámit ještì pøed pøednáškou, na kterém je ta která oblast probírána. Pøednášky cílenì nejsou vedeny jako vıklad novıch témat "od nuly", ale pøedpokládá se, e pøítomní u témata alespoò na základní úrovni prošli v odkazovanıch materiálech, a lze se tedy vìnovat diskusi, provázání probíraného s døívìjší látkou a souvisejícími oblastmi, pøípadnì vysvìtlování pokroèilıch otázek.
+
+Pøi souèasném rozsahu pøedmìtu bohuel nelze zavést klasická poèítaèová cvièení. Všem proto doporuèuji pouívat na pøednáškách notebooky, tablety a další zaøízení, na nich si budou moci pøímo "hrát" s demonstraèním kódem. Èást pøednášky by tak lépe mohla mít formu demonstraèního cvièení, kdy budu kód modifikovat pøímo pøed tabulí a vy budete moci vidìt, pøípadnì si i zkoušet, dùsledky konkrétních zmìn.
+
+Materiály, které budu vyuívat na pøednáškách (jak bylo uvedeno, spíše jako podklad k diskusi) budou sice zveøejnìny, ale nejsou primárnì urèeny k samostudiu. Nemá tedy cenu se na nì zamìøovat pøi pøípravì na zkoušku, je vhodnìjší znovu projít materiály k jednotlivım tématùm a projekty. Materiály budou pøevánì ve formátu Jupyter Notebook. O instalaci tohoto prostøedí bude øeè na první pøednášce.
