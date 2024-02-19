@@ -12,7 +12,10 @@ def camel_to_snake_case(name):
     'long_vat_number'
     """
 
-    inbetween = re.compile(r''' (?<!([A-Z]{1}))([a-z])(?=[A-Z]) ''', re.VERBOSE)
+    inbetween = re.compile(r'''
+                           ( 
+                            (?<!([A-Z]{1}))(?=[a-z])(?=[A-Z]) 
+                            ''', re.VERBOSE)
     return inbetween.sub(r'_', name).lower()
 
 
