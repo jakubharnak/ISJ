@@ -12,10 +12,7 @@ def camel_to_snake_case(name):
     'long_vat_number'
     """
 
-    inbetween = re.compile(r'''
-                           ( 
-                            (?<!([A-Z]{1}))(?=[a-z])(?=[A-Z]) 
-                            ''', re.VERBOSE)
+    inbetween = re.compile(r'''((?<!([A-Z]{1}))(?=[a-z])(?=[A-Z]))''', re.VERBOSE)
     return inbetween.sub(r'_', name).lower()
 
 
@@ -27,15 +24,9 @@ def not_both_titles(names_string):
     >>> not_both_titles('doc. Josef Tyl, Rudolf Srp, Ph.D., Pavel Vlk, doc. RNDr. Petr Berka, Ph.D., Jan Hora')
     ['doc. Josef Tyl', 'Rudolf Srp, Ph.D.', 'Pavel Vlk', 'Jan Hora']
     """
-
-    pat = re.compile(r'''
-(?:
-  (?<=([Pp]rof\.|([Dd]oc\.)) ) (?=.* , Ph\.D\. )
-|
-  .*
-)
-''', re.X)
-
+    """?????? maybe takto????"""
+    pat = re.compile(r'(?:[Pp]rof\.|[Dd]oc\.)\s[\w\s]+,\sPh\.D\.|(.*?)(?:,\s|$)')
+    return [name.strip() for name in pat.findall(names_string) if name]
 
 
 if __name__ == "__main__":
