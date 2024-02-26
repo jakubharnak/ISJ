@@ -2,7 +2,7 @@
 # change the last du to DU
 
 import re
-pattern = re.compile(r'du(?<!\w)')
+pattern = re.compile(r'du(?!.*du)')
 text = ['du du du',
         'du po ledu',
         'dopĹedu du',
