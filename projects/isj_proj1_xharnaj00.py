@@ -22,9 +22,9 @@ def not_both_titles(names_string):
     >>> not_both_titles('doc. Josef Tyl, Rudolf Srp, Ph.D., Pavel Vlk, doc. RNDr. Petr Berka, Ph.D., Jan Hora')
     ['doc. Josef Tyl', 'Rudolf Srp, Ph.D.', 'Pavel Vlk', 'Jan Hora']
     """
-    """?????? maybe takto????"""
+    
     pat = re.compile(r'((?:[Pp]rof\.|[Dd]oc\.)\s[\w\s]+(?!,\sPh\.D\.)|(?:[Pp]rof\.|[Dd]oc\.)(?:[\w\s]+(?=,\sPh\.D\.))|[\w\s]+(?!,))')
-    return [name.strip() for name in pat.findall(names_string) if name]
+    return [name for name in pat.findall(names_string) if name]
 
 
 if __name__ == "__main__":
