@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 import re
 
@@ -11,22 +12,37 @@ def camel_to_snake_case(name):
     'long_vat_number'
     """
 
-    inbetween = re.compile(r'((?<=[a-z0-9])[A-Z]|(?!^)[A-Z](?=[a-z]))')
-    return inbetween.sub(r'_\1', name).lower()
+    inbetween = re.compile(r'''
+                            (
+                             (?<=([a-z]))(?=[A-Z])              # between a lowercase and
+                                                                # an uppercase letter
+                             |                                  # or
+                             (?=[A-Z][a-z])                     # in front of an uppercase
+                                                                # followed by a lowercase 
+                            )
+                            ''', re.VERBOSE)
+    return inbetween.sub(r'_', name).lower()
+
 
 # ukol za 2 body
 def not_both_titles(names_string):
     """Returns a list of names not preceded by [Pp]rof./[Dd]oc. and 
-    followed by ', Ph.D.'
+       followed by ', Ph.D.'
 
     >>> not_both_titles('doc. Josef Tyl, Rudolf Srp, Ph.D., Pavel Vlk, doc. RNDr. Petr Berka, Ph.D., Jan Hora')
     ['doc. Josef Tyl', 'Rudolf Srp, Ph.D.', 'Pavel Vlk', 'Jan Hora']
     """
-    
-    pat = re.compile(r'((?:[Dd]oc\.\s[^,]*(?!,\sPh\.D\.)|[^,]*,\sPh\.D\.|[^,]*)(?=,|$))', re.X)
-    names = [name.strip() for name in pat.findall(names_string) if name.strip()]
-    return [name for name in names if not (name.startswith(('doc.', 'Doc.')) and name.endswith(', Ph.D.'))]
+
+    # a name that is either preceded by [Pp]rof./[Dd]oc. and followed by Ph.D.
+    # or other name with potential titles
+    pat = re.compile(r'''
+                      (?:[Dd]oc\.|[Pp]rof\.) [^,]+,\sPh\.D\.\s*           # it is either
+                      |                                                   # or
+                      ([^," "]+[^,]+(?:,\sPh\.D\.)?)\s*                   # it is
+                      ''', re.X)
+    return [g1 for g1 in pat.findall(names_string) if g1]
+
 
 if __name__ == "__main__":
- import doctest
- doctest.testmod()
+    import doctest
+    doctest.testmod()
