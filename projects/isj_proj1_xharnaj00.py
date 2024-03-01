@@ -23,9 +23,9 @@ def not_both_titles(names_string):
     ['doc. Josef Tyl', 'Rudolf Srp, Ph.D.', 'Pavel Vlk', 'Jan Hora']
     """
     
-    pat = re.compile(r'((?:[Pp]rof\.|[Dd]oc\.)\s[\w\s]+(?!,\sPh\.D\.)|(?:[Pp]rof\.|[Dd]oc\.)(?:[\w\s]+(?=,\sPh\.D\.))|[\w\s]+(?!,))')
-    return [name for name in pat.findall(names_string) if name]
-
+    pat = re.compile(r'((?:[Dd]oc\.\s[^,]*(?!,\sPh\.D\.)|[^,]*,\sPh\.D\.|[^,]*)(?=,|$))', re.X)
+    names = [name.strip() for name in pat.findall(names_string) if name.strip()]
+    return [name for name in names if not (name.startswith(('doc.', 'Doc.')) and name.endswith(', Ph.D.'))]
 
 if __name__ == "__main__":
  import doctest
