@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 # ukol za 2 body
 def first_odd_or_even(numbers):
