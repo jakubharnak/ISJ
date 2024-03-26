@@ -30,7 +30,7 @@ def match_permutations_substrings(string, words):
     # permutations as a set
     perms = all_permutations_substrings(string)
 
-    return                                        # your solution
+    return {perm for perm in perms if perm in words}                                       # your solution
 
 
 # max 1 point
@@ -48,7 +48,7 @@ def uniq_srt(it):
 
     """
 
-    return                                        # your solution
+    return sorted(set(it))                                       # your solution
 
 
 # max 2 points
@@ -67,7 +67,7 @@ def uniq_orig_order(it):
 
     """
 
-    return                                        # your solution
+    return list(dict.fromkeys(it))                                       # your solution
 
 
 if __name__ == "__main__":
