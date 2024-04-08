@@ -52,9 +52,9 @@ def gen_quiz(qpool, *index, altcodes='ABCDEF', quiz=None):
                 formatted_answers = [f'{code}: {answer}' for code, answer in zip(altcodes_used, answers)]
                 quiz.append((question, formatted_answers))
             else:
-                print(f"Ignoring index {i} - list indices must be integers or slices, not {type(i).__name__}")
+                print(f"Ignoring index {i} - {type(i).__name__}")
         except IndexError as error:
-            print(f"Ignoring index {i} - list index out of range: {error}")
+            print(f"Ignoring index {i} - {error}")
         except TypeError as error:
             print(f"Ignoring index {i} - {error}")
 
