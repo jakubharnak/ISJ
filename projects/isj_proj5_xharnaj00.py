@@ -1,4 +1,4 @@
-# #!/usr/bin/env python3
+#!/usr/bin/env python3
 
 
 def gen_quiz(qpool, *index, altcodes='ABCDEF', quiz=None):
