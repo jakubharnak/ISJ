@@ -1,8 +1,6 @@
 routes = {'Brno': {'Berlin', 'London'}, 'Ostrava': {'Split'}}
 
-inverted_routes = {destination_set: origin for origin, 
-                   destinations in routes.items() 
-                   for destination_set in [frozenset(destinations)]}
+inverted_routes = {destination_set: origin for origin, destinations in routes.items() for destination_set in [frozenset(destinations)]}
 
 print(inverted_routes)
 
