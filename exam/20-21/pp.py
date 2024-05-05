@@ -27,3 +27,11 @@ class E(B,C,D):
         print("leaving E")
 
 e = E()
+
+# entering E
+# entering B
+# entering A
+# no super() in C
+# leaving A
+# leaving B
+# leaving E

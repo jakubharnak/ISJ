@@ -1,4 +1,4 @@
-print(sum(x>5 for x in range(10))) # 4
+print(sum(x>5 for x in range(10))) # output - 4
 
 # range(10) generuje posloupnost čísel od 0 do 9.
 # x>5 for x in range(10) je generátorový výraz, který pro každé číslo x v rozsahu vrátí 

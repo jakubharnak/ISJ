@@ -1,6 +1,9 @@
 print(sorted([8, 3, 2, 42, 5], key = lambda x: 0 if x == -42 or x == 42 else x))
+#[42, 2, 3, 5, 8]
 print(sorted([8, 3, 2, 42, 5], key = lambda x: 0 if x == 42 or x%2 else x))
+#[3, 42, 5, 2, 8]
 print(sorted([8, 3, 2, 42, 5], key = lambda x: 0 if x == 42 or x%3 else x))
+#[8, 2, 42, 5, 3]
 
 
 # sorted() je funkce, která seřadí daný seznam1.
