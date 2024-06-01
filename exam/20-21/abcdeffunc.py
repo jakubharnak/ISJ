@@ -33,10 +33,7 @@ class F(object):
         print("leaving F")
 
 class G(B, C, D, E, F):
-    def __init__(self):
-        print("entering G")
-        super().__init__()
-        print("leaving G")
+    pass
 
 g = G()
 

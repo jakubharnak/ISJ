@@ -1,7 +1,7 @@
 import re
 text = 'abbacccdee'
 
-result = [m[0] for m in re.finditer(r'(a+|b+|c+|d+)', text)] # or r'(.)\1*'
+result = [m[0] for m in re.finditer(r'(a+|b+|c+|d+|e+)', text)] # or r'(.)\1*'
 print(result)
 
 # What is the output of this code? - ['a', 'bb', 'a', 'ccc', 'd']
